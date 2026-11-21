@@ -1,5 +1,15 @@
+server:
+  address: 127.0.0.1
+  port: 8092
+  servlet:
+    session:
+      persistent: true
+      store-dir: ./data/sessions
 spring:
-  config:
-    name: s-pay-mall-mvc
-  profiles:
-    active: dev
+  datasource:
+    url: jdbc:h2:file:./data/shop
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
